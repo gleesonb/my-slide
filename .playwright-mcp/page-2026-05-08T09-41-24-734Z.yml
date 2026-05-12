@@ -1,0 +1,66 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - complementary [ref=e5]:
+      - generic [ref=e6]:
+        - heading "open-slide" [level=1] [ref=e7]
+        - button "Toggle theme" [ref=e9]:
+          - img
+      - generic [ref=e11]:
+        - generic [ref=e13]: 📝
+        - button "Draft" [ref=e14]
+        - generic [ref=e15]: "05"
+      - generic [ref=e17]: Folders
+      - button "New folder" [ref=e20]:
+        - img [ref=e21]
+        - generic [ref=e22]: New folder
+    - generic [ref=e24]:
+      - banner [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]: 📝
+          - heading "Draft" [level=1] [ref=e28]
+          - generic [ref=e29]: "05"
+          - generic [ref=e31]:
+            - img
+            - textbox "Search slides" [ref=e32]
+      - list [ref=e33]:
+        - listitem [ref=e34]:
+          - generic [ref=e35]:
+            - link "Loading cloudfix" [ref=e36] [cursor=pointer]:
+              - /url: /s/cloudfix
+              - generic [ref=e38]: Loading
+              - heading "cloudfix" [level=3] [ref=e40]
+            - button "Slide actions" [ref=e42]:
+              - img [ref=e43]
+        - listitem [ref=e47]:
+          - generic [ref=e48]:
+            - link "Loading cloudfix-exiger" [ref=e49] [cursor=pointer]:
+              - /url: /s/cloudfix-exiger
+              - generic [ref=e51]: Loading
+              - heading "cloudfix-exiger" [level=3] [ref=e53]
+            - button "Slide actions" [ref=e55]:
+              - img [ref=e56]
+        - listitem [ref=e60]:
+          - generic [ref=e61]:
+            - link "Loading cloudfix-followup" [ref=e62] [cursor=pointer]:
+              - /url: /s/cloudfix-followup
+              - generic [ref=e64]: Loading
+              - heading "cloudfix-followup" [level=3] [ref=e66]
+            - button "Slide actions" [ref=e68]:
+              - img [ref=e69]
+        - listitem [ref=e73]:
+          - generic [ref=e74]:
+            - link "Loading getting-started" [ref=e75] [cursor=pointer]:
+              - /url: /s/getting-started
+              - generic [ref=e77]: Loading
+              - heading "getting-started" [level=3] [ref=e79]
+            - button "Slide actions" [ref=e81]:
+              - img [ref=e82]
+        - listitem [ref=e86]:
+          - generic [ref=e87]:
+            - link "Loading rightspend-ellucian" [ref=e88] [cursor=pointer]:
+              - /url: /s/rightspend-ellucian
+              - generic [ref=e90]: Loading
+              - heading "rightspend-ellucian" [level=3] [ref=e92]
+            - button "Slide actions" [ref=e94]:
+              - img [ref=e95]
+  - region "Notifications alt+T"

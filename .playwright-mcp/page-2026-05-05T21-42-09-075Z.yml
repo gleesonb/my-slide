@@ -1,0 +1,8 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "← Home" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e5]: Load failed
+    - heading "Failed to load slide" [level=2] [ref=e6]
+    - generic [ref=e7]: "Slide not found: cloudfix"
+  - region "Notifications alt+T"

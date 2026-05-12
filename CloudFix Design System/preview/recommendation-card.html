@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Recommendation card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>body{margin:0;padding:20px;background:var(--cf-surface-2);font-family:var(--font-body)}
+.card{background:#fff;border-radius:10px;padding:18px 22px;box-shadow:var(--shadow-2);border-left:4px solid var(--cf-teal);display:grid;grid-template-columns:1fr auto auto auto auto auto;gap:24px;align-items:center}
+.title{display:flex;flex-direction:column;gap:4px}
+.title h3{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--cf-navy);margin:0}
+.title p{font-size:13px;color:var(--cf-fg-3);margin:0}
+.metric{display:flex;flex-direction:column;align-items:flex-end}
+.metric .v{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--cf-navy);line-height:1}
+.metric.savings .v{color:var(--cf-success)}
+.metric .l{font-family:var(--font-display);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--cf-fg-3);margin-top:6px}
+.chev{color:var(--cf-fg-4);font-size:18px}
+</style></head><body>
+<div class="card">
+  <div class="title"><h3>Easy (16)</h3><p>Safe, fully automatable savings.</p></div>
+  <div class="metric"><div class="v">$15.2K</div><div class="l">Potential</div></div>
+  <div class="metric"><div class="v">$1.1M</div><div class="l">Completed</div></div>
+  <div class="metric savings"><div class="v">$544K</div><div class="l">Realized</div></div>
+  <div class="metric"><div class="v">34</div><div class="l">Available</div></div>
+  <div class="chev">⌄</div>
+</div>
+</body></html>

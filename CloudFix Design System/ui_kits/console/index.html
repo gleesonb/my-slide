@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CloudFix Console — UI Kit</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="icon" href="../../assets/favicon.png">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--cf-surface-2); }
+  .app { display: flex; min-height: 100vh; flex-direction: column; }
+  .body { display: flex; flex: 1; }
+  .main { flex: 1; padding: 28px 32px; overflow: auto; }
+  .h-page { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--cf-navy); margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub-page { color: var(--cf-fg-3); font-size: 14px; margin: 0 0 24px; }
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+  .view { display: none; }
+  .view.active { display: block; }
+  .switcher { background: #fff; border-bottom: 1px solid var(--cf-divider); padding: 8px 32px; display: flex; gap: 8px; font-size: 12px; color: var(--cf-fg-3); }
+  .switcher button { background: transparent; border: 1px solid var(--cf-divider); border-radius: 6px; padding: 4px 10px; font-size: 11px; cursor: pointer; color: var(--cf-fg-2); font-family: var(--font-body); }
+  .switcher button.active { background: var(--cf-navy); color: #fff; border-color: var(--cf-navy); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="Components.jsx"></script>
+<script type="text/babel">
+  const { useState } = React;
+
+  function ConsoleApp() {
+    const [view, setView] = useState("recommendations");
+    const [tab, setTab] = useState("available");
+    const [selected, setSelected] = useState(2);
+
+    return (
+      <div className="app">
+        <ConsoleTopBar org="Acme Corp · 8 accounts" />
+        <div className="switcher">
+          <span style={{ alignSelf: "center", marginRight: 8 }}>Demo views:</span>
+          <button className={view==="recommendations"?"active":""} onClick={()=>setView("recommendations")}>Recommendations</button>
+          <button className={view==="detail"?"active":""} onClick={()=>setView("detail")}>Recommendation detail</button>
+          <button className={view==="onboarding"?"active":""} onClick={()=>setView("onboarding")}>Onboarding</button>
+        </div>
+
+        {view === "onboarding" ? (
+          <OnboardingSplit />
+        ) : (
+          <div className="body">
+            <Sidebar active={view==="detail" ? "recommendations" : "recommendations"} />
+            <main className="main">
+
+              {view === "recommendations" && (
+                <>
+                  <h1 className="h-page">Recommendations</h1>
+                  <p className="sub-page">34 available across 4 effort tiers · Last scan 12 minutes ago</p>
+
+                  <div className="stats-row">
+                    <StatTile label="Potential Savings" value="$15.2K" />
+                    <StatTile label="Completed Savings" value="$1.1M" accent="navy" />
+                    <StatTile label="Realized Savings" value="$544.9K" accent="success" delta="↑ $42K this month" />
+                    <StatTile label="Recommendations" value="34" accent="blue" />
+                  </div>
+
+                  <RecommendationGroup
+                    title="Easy" subtitle="Safe, fully automatable savings."
+                    count={16}
+                    potential="$15.2K" completed="$1.1M" realized="$544.9K" available={34}
+                    rows={[
+                      { name: "QuickSight Remove Idle Users", potential: "$8.2K", completed: "$134.1K", realized: "$131.3K", available: 33 },
+                      { name: "Long Stopped EBS Volume",      potential: "$4.6K", completed: "$65.5K",  realized: "$114.2K", available: 0 },
+                      { name: "EFS Intelligent Tiering",      potential: "$1.1K", completed: "$5.6K",   realized: "$0",      available: 0 },
+                      { name: "Unused Elastic IP Addresses",  potential: "$944", completed: "$30.2K",  realized: "$30.1K",  available: 0 },
+                      { name: "Elasticsearch to Graviton",    potential: "$166", completed: "$3.8K",   realized: "$241",    available: 0 },
+                      { name: "DynamoDB Use Provisioning and Autoscaling", potential: "$157", completed: "$255.1K", realized: "$29.8K", available: 1 },
+                      { name: "Archive old EBS volume snapshots.", potential: "$0", completed: "$159.7K", realized: "$71.5K", available: 0 },
+                      { name: "CloudFront Turn on Compression",    potential: "$0", completed: "$22.2K",  realized: "$21.7K", available: 0 },
+                      { name: "Disable duplicate CloudTrails",     potential: "$0", completed: "$37.0K",  realized: "$-25,026", available: 0 },
+                      { name: "EBS GP2 to GP3",                    potential: "$0", completed: "$22.7K",  realized: "$11.0K", available: 0 },
+                    ]}
+                  />
+                  <RecommendationGroup
+                    title="Medium" subtitle="Reviewable changes — mostly automatable."
+                    count={12} potential="$48.7K" completed="$320.4K" realized="$120.1K" available={9}
+                    expanded={false} rows={[]}
+                  />
+                  <RecommendationGroup
+                    title="Hard" subtitle="Larger refactors. CloudFix advises, you implement."
+                    count={6} potential="$112.0K" completed="$0" realized="$0" available={6}
+                    expanded={false} rows={[]}
+                  />
+                </>
+              )}
+
+              {view === "detail" && (
+                <>
+                  <p style={{fontFamily:"var(--font-display)",fontSize:11,letterSpacing:".1em",textTransform:"uppercase",color:"var(--cf-fg-3)",margin:"0 0 4px"}}>RECOMMENDATION</p>
+                  <h1 style={{fontFamily:"var(--font-display)",fontSize:24,fontWeight:700,color:"var(--cf-blue)",margin:"0 0 28px"}}>QuickSight Remove Idle Users</h1>
+
+                  <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:16,marginBottom:24}}>
+                    <StatTile label="Potential Savings" value="$8.2K" accent="success" />
+                    <StatTile label="Resources Eligible" value="33" accent="blue" />
+                    <StatTile label="Last Scan" value="12 min" />
+                  </div>
+
+                  <StatusTabs active={tab} onChange={setTab} />
+                  <ActionToolbar selected={selected} />
+                  <ResourceTable rows={[
+                    { resource: "max.bocien@acme.com", account: "Prod-AWS-Engineering", ou: "Production", cost: "$248", savings: "$248", status: "Ready" },
+                    { resource: "hannah.song@acme.com", account: "Prod-AWS-Engineering", ou: "Production", cost: "$248", savings: "$248", status: "Ready" },
+                    { resource: "miguel.bano@acme.com", account: "Prod-AWS-Engineering", ou: "Production", cost: "$248", savings: "$248", status: "Pending" },
+                    { resource: "rohit-aws-prod-central", account: "Prod-Central-Ops", ou: "Compliance", cost: "$248", savings: "$248", status: "Running" },
+                    { resource: "michelle.ahern-hayes", account: "BigData-Analytics", ou: "BigData-Analytics", cost: "$248", savings: "$248", status: "Completed" },
+                    { resource: "rohit-aws-bigdata-cluster", account: "BigData-Analytics", ou: "BigData-Analytics", cost: "$248", savings: "$248", status: "Ready" },
+                    { resource: "sasha.engineering-bd", account: "BigData-Analytics", ou: "BigData-Analytics", cost: "$248", savings: "$248", status: "Failed" },
+                    { resource: "michelle.proudprod", account: "BigData-Analytics", ou: "BigData-Analytics", cost: "$248", savings: "$248", status: "Ready" },
+                    { resource: "alex.zhang@acme.com",  account: "Prod-AWS-Engineering", ou: "Production", cost: "$248", savings: "$248", status: "Ready" },
+                  ]} />
+                </>
+              )}
+
+            </main>
+          </div>
+        )}
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById("root")).render(<ConsoleApp />);
+</script>
+</body>
+</html>

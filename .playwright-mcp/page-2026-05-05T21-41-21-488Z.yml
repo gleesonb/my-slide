@@ -1,0 +1,34 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - complementary [ref=e5]:
+      - generic [ref=e6]:
+        - heading "open-slide" [level=1] [ref=e7]
+        - button "Toggle theme" [ref=e9]:
+          - img
+      - generic [ref=e11]:
+        - generic [ref=e13]: 📝
+        - button "Draft" [ref=e14]
+        - generic [ref=e15]: "01"
+      - generic [ref=e17]: Folders
+      - button "New folder" [ref=e20]:
+        - img [ref=e21]
+        - generic [ref=e22]: New folder
+    - generic [ref=e24]:
+      - banner [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]: 📝
+          - heading "Draft" [level=1] [ref=e28]
+          - generic [ref=e29]: "01"
+          - generic [ref=e31]:
+            - img
+            - textbox "Search slides" [ref=e32]
+      - list [ref=e33]:
+        - listitem [ref=e34]:
+          - generic [ref=e35]:
+            - link "Loading getting-started" [ref=e36] [cursor=pointer]:
+              - /url: /s/getting-started
+              - generic [ref=e38]: Loading
+              - heading "getting-started" [level=3] [ref=e40]
+            - button "Slide actions" [ref=e42]:
+              - img [ref=e43]
+  - region "Notifications alt+T"

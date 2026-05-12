@@ -1,0 +1,181 @@
+/* ============================================================
+   CloudFix — Colors & Type
+   Source of truth for design tokens. Import in any HTML file:
+   <link rel="stylesheet" href="/colors_and_type.css">
+   ============================================================ */
+
+/* ----- Webfonts (Google Fonts substitution; original brand uses these families) ----- */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ---------------- BRAND COLORS ---------------- */
+  /* Primary brand — pulled from the wordmark gradient + nav UI */
+  --cf-navy:        #1F3A68;   /* deep navy — headlines, primary nav, buttons */
+  --cf-navy-900:    #142747;   /* extra-dark surface */
+  --cf-navy-700:    #25467a;
+  --cf-blue:        #2A8FEA;   /* primary action blue (logo wordmark mid-tone) */
+  --cf-blue-600:    #1F7BD0;   /* hover */
+  --cf-blue-100:    #DCEBFB;   /* tinted bg, chip bg */
+  --cf-cyan:        #2AC1D6;   /* logo orb start, accent gradient origin */
+  --cf-teal:        #2FCFB3;   /* secondary accent — left rule on cards in app */
+
+  /* Logo gradient — use as image accents only, NOT body backgrounds */
+  --cf-grad-logo:   linear-gradient(95deg, #2AC1D6 0%, #2A8FEA 60%, #1F3A68 100%);
+  --cf-grad-onboard:linear-gradient(135deg, #1F8FBE 0%, #1F5FAA 60%, #1F3A68 100%);
+  --cf-grad-hero:   linear-gradient(180deg, #FFFFFF 0%, #F2F8FE 100%);
+
+  /* Highlight — used sparingly (CTAs in some site contexts, status pings, AWS accent) */
+  --cf-orange:      #ED8705;   /* meta theme color from cloudfix.com */
+  --cf-orange-600:  #C97000;
+
+  /* Status / semantic */
+  --cf-success:     #1FB36B;   /* "savings realized" green */
+  --cf-success-100: #DEF6EA;
+  --cf-warn:        #ED8705;
+  --cf-warn-100:    #FCEBD2;
+  --cf-danger:      #D14545;
+  --cf-danger-100:  #FADCDC;
+  --cf-info:        #2A8FEA;
+  --cf-info-100:    #DCEBFB;
+
+  /* ---------------- NEUTRALS / GREYSCALE ---------------- */
+  --cf-ink:         #0F1B2D;   /* near-black text */
+  --cf-fg-1:        #1B2A41;   /* body */
+  --cf-fg-2:        #4A5A75;   /* secondary text */
+  --cf-fg-3:        #7A8AA3;   /* tertiary / metadata */
+  --cf-fg-4:        #A9B5C7;   /* disabled / faint */
+  --cf-divider:     #E4EAF1;
+  --cf-border:      #D5DDE8;
+  --cf-surface-2:   #F5F8FB;   /* zebra rows, subtle panel */
+  --cf-surface-1:   #FBFCFE;   /* card on tinted bg */
+  --cf-bg:          #FFFFFF;
+
+  /* ---------------- SPACING ---------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* ---------------- RADII ---------------- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;   /* default card */
+  --radius-lg: 16px;   /* large feature card */
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ---------------- SHADOWS ---------------- */
+  /* Soft, layered, mostly cool — no warm/cast shadows */
+  --shadow-1: 0 1px 2px rgba(15, 27, 45, 0.04), 0 1px 1px rgba(15, 27, 45, 0.03);
+  --shadow-2: 0 4px 12px rgba(15, 27, 45, 0.06), 0 1px 2px rgba(15, 27, 45, 0.04);
+  --shadow-3: 0 10px 30px rgba(15, 27, 45, 0.08), 0 2px 6px rgba(15, 27, 45, 0.04);
+  --shadow-4: 0 24px 60px rgba(15, 27, 45, 0.14), 0 4px 12px rgba(15, 27, 45, 0.06);
+  --shadow-focus: 0 0 0 3px rgba(42, 143, 234, 0.35);
+
+  /* ---------------- MOTION ---------------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 360ms;
+
+  /* ---------------- TYPOGRAPHY — FAMILIES ---------------- */
+  --font-display: 'Raleway', 'Helvetica Neue', Arial, sans-serif;  /* headings, logo lockups, big stats */
+  --font-body:    'Open Sans', 'Helvetica Neue', Arial, sans-serif; /* body, UI, tables */
+  --font-mono:    ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* ---------------- TYPOGRAPHY — SCALE ---------------- */
+  /* Display + headings use Raleway. Body uses Open Sans. */
+  --fs-display:  clamp(40px, 5vw, 72px);
+  --fs-h1:       clamp(32px, 3.6vw, 48px);
+  --fs-h2:       clamp(26px, 2.6vw, 36px);
+  --fs-h3:       22px;
+  --fs-h4:       18px;
+  --fs-body:     16px;
+  --fs-small:    14px;
+  --fs-micro:    12px;
+  --fs-eyebrow:  13px;
+
+  --lh-tight:   1.1;
+  --lh-snug:    1.25;
+  --lh-normal:  1.5;
+  --lh-loose:   1.7;
+
+  --tracking-eyebrow: 0.12em;
+  --tracking-tight:   -0.01em;
+  --tracking-normal:  0;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES
+   Apply by including this file; default body styles ship below.
+   ============================================================ */
+
+html, body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--cf-fg-1);
+  background: var(--cf-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--cf-navy);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-tight);
+  font-weight: 700;
+  margin: 0;
+}
+h1, .h1 { font-size: var(--fs-h1); font-weight: 800; }
+h2, .h2 { font-size: var(--fs-h2); font-weight: 700; }
+h3, .h3 { font-size: var(--fs-h3); font-weight: 700; line-height: var(--lh-snug); }
+h4, .h4 { font-size: var(--fs-h4); font-weight: 600; line-height: var(--lh-snug); }
+
+.display { font-family: var(--font-display); font-size: var(--fs-display); font-weight: 800; line-height: 0.95; letter-spacing: -0.015em; color: var(--cf-navy); }
+
+p, .p { font-size: var(--fs-body); line-height: var(--lh-normal); color: var(--cf-fg-1); margin: 0; }
+.lede { font-size: 18px; line-height: var(--lh-loose); color: var(--cf-fg-2); }
+.small { font-size: var(--fs-small); }
+.micro { font-size: var(--fs-micro); color: var(--cf-fg-3); }
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--cf-blue);
+}
+
+code, pre, .mono { font-family: var(--font-mono); font-size: 0.95em; }
+
+a { color: var(--cf-blue); text-decoration: none; transition: color var(--dur-fast) var(--ease-out); }
+a:hover { color: var(--cf-blue-600); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Big stat — used across marketing + dashboard */
+.stat-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(40px, 4.5vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--cf-navy);
+}
+.stat-label {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cf-fg-3);
+}

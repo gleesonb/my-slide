@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Form inputs</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>body{margin:0;padding:24px;background:#fff;font-family:var(--font-body)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:12px;font-weight:600;color:var(--cf-fg-2);margin-bottom:6px;font-family:var(--font-display);letter-spacing:.04em;text-transform:uppercase}
+input[type=text],input[type=email],select{width:100%;padding:10px 12px;border:1px solid var(--cf-border);border-radius:6px;font-size:14px;font-family:var(--font-body);background:#fff;color:var(--cf-fg-1);box-sizing:border-box}
+input:focus,select:focus{outline:none;border-color:var(--cf-blue);box-shadow:var(--shadow-focus)}
+.check{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--cf-fg-1)}
+.check input{width:16px;height:16px;accent-color:var(--cf-blue)}
+.help{font-size:12px;color:var(--cf-fg-3);margin-top:6px}
+</style></head><body>
+<div class="grid">
+  <div><label>AWS account ID</label><input type="text" value="123456789012"></div>
+  <div><label>Region</label><select><option>us-east-1 (N. Virginia)</option></select></div>
+  <div><label>Email</label><input type="email" placeholder="you@company.com"></div>
+  <div><label>Status filter</label><select><option>All recommendations</option></select></div>
+  <div style="grid-column:1/-1;display:flex;gap:18px;padding-top:6px">
+    <div class="check"><input type="checkbox" checked> Auto-approve safe fixers</div>
+    <div class="check"><input type="checkbox"> Notify by email</div>
+    <div class="check"><input type="checkbox" checked> Run weekly</div>
+  </div>
+</div>
+</body></html>

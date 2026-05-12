@@ -1,0 +1,115 @@
+/* ============================================================
+   CloudFix Console — Codebase Tokens (Poppins variant)
+   Source: gleesonb-aurea/cloudfix-aws@qa cloudfix-ext/ui/
+       packages/tw-config/index.js
+       apps/web/src/styles/globals.css
+       apps/web/src/components/atoms/Button/Button.lib.ts
+
+   These are the EXACT tokens used in the running CloudFix product
+   (the in-app console at app.cloudfix.com). Use this stylesheet for
+   any artifact that should look like the real app — onboarding flows,
+   dashboard, recommendation tables, fixers, settings.
+
+   For marketing-site work continue using `colors_and_type.css`
+   (Raleway/Open Sans + the cloudfix.com palette). The two systems
+   share a navy/blue visual register but the in-app product is
+   Poppins-based and uses a slightly different blue-set.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+  /* --------------------------------------------------------
+     BRAND COLORS — verbatim from packages/tw-config/index.js
+     -------------------------------------------------------- */
+  --cfc-light-gray:       #F1F5FF;   /* hover bg, popover hover */
+  --cfc-gray:             #474E5F;   /* welcome name, secondary text */
+  --cfc-blue:             #7095F7;   /* anchor color, "blue" button bg */
+
+  /* Recommendation-effort legend (matches Charts colors) */
+  --cfc-easy:             #19CDA2;
+  --cfc-medium:           #F7CD52;
+  --cfc-advanced:         #D04C49;
+  --cfc-reservations:     #ba9eba;
+  --cfc-bestprac:         #7940F2;
+  --cfc-default:          #232F3E;   /* AWS slate — neutral category */
+  --cfc-manualfixes:      #14C0FA;
+  --cfc-monitoring:       #0096FF;
+
+  /* Glass tints used for translucent surfaces */
+  --cfc-white-20:         rgba(255, 255, 255, 0.2);
+  --cfc-glass-5:          rgba(0, 0, 0, 0.05);
+  --cfc-glass-10:         rgba(0, 0, 0, 0.1);
+
+  /* --------------------------------------------------------
+     INFERRED FROM globals.css + Button.lib.ts
+     (literal hex strings from the running product)
+     -------------------------------------------------------- */
+
+  /* Brand gradients — from globals.css `@layer components` */
+  --cfc-grad-brand:        linear-gradient(to right, #04BCC6, #0686D9);   /* .background_gradient — onboarding header, hero callouts */
+  --cfc-grad-dash-header:  linear-gradient(to right, #039EA8, #0473B8);   /* .background_gradient_dashboard_header */
+
+  /* Loader / spinner accent — `.lds-default` */
+  --cfc-loader:            #29417F;
+
+  /* Button system — verbatim Button.lib.ts */
+  --cfc-btn-purple:        #1278E0;   /* primary action — bg-[#1278E0] (despite name) */
+  --cfc-btn-purple-hover-a:#24D9BA;   /* hover gradient stop */
+  --cfc-btn-purple-hover-b:#127BE0;
+  --cfc-btn-purple-active: #23376C;
+  --cfc-btn-green:         #265A2C;
+  --cfc-btn-green-hover:   #1C4421;
+  --cfc-btn-green-active:  #193B1D;
+  --cfc-btn-grey:          #5E635F;
+  --cfc-btn-grey-hover:    #444A44;
+  --cfc-btn-grey-active:   #2A2E2A;
+  --cfc-btn-darkblue:      #1C2E5B;
+  --cfc-btn-darkblue-hover:#29419F;
+  --cfc-btn-darkblue-active:#13203F;
+  --cfc-btn-yellow:        #FFD614;
+  --cfc-btn-yellow-hover:  #ECC100;
+  --cfc-btn-yellow-active: #D9AC00;
+
+  /* Admin badge color — from MainHeader.tsx */
+  --cfc-admin-badge:       #037ADE;
+
+  /* Tertiary muted (welcome role line) */
+  --cfc-muted-600:         #6B7280;   /* literal text-[#6B7280] in MainHeader */
+
+  /* --------------------------------------------------------
+     LAYOUT CONSTANTS
+     -------------------------------------------------------- */
+  --cfc-header-h:          70px;     /* MainHeader height */
+  --cfc-radius-xl:         10px;     /* tailwind extend.borderRadius.xl */
+  --cfc-radius-btn:        5px;      /* Button.tsx — rounded-[5px] */
+
+  /* --------------------------------------------------------
+     TYPOGRAPHY
+     globals.css ships Poppins 100/200/300/400/500/600/700.
+     -------------------------------------------------------- */
+  --cfc-font:              'Poppins', system-ui, sans-serif;
+}
+
+/* ============================================================
+   CONVENIENCE CLASSES — match Tailwind utility names from the repo
+   so console mockups can use the same class names as the real app.
+   ============================================================ */
+
+.cfc-app, .cfc-app * {
+  font-family: var(--cfc-font);
+}
+
+.bg-cloudfix-light-gray { background-color: var(--cfc-light-gray); }
+.text-cloudfix-gray     { color: var(--cfc-gray); }
+.text-cloudfix-blue     { color: var(--cfc-blue); }
+
+.background_gradient                 { background-image: var(--cfc-grad-brand); }
+.background_gradient_dashboard_header{ background-image: var(--cfc-grad-dash-header); }
+.anchor_style                        { color: var(--cfc-blue); }
+.anchor_style:hover                  { text-decoration: underline; text-underline-offset: 3px; }
+
+/* The repo's main page chrome class equivalent: `px-5 py-10 pt-[70px]` */
+.cfc-main {
+  padding: 70px 20px 40px;
+}

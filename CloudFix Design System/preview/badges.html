@@ -1,0 +1,29 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Status badges</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>body{margin:0;padding:24px;background:#fff;font-family:var(--font-body)}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.b{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:600;font-family:var(--font-body)}
+.b::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.success{background:#DEF6EA;color:#1FB36B}
+.info{background:#DCEBFB;color:#2A8FEA}
+.warn{background:#FCEBD2;color:#C97000}
+.danger{background:#FADCDC;color:#D14545}
+.neutral{background:#E4EAF1;color:#4A5A75}
+.solid{padding:4px 10px;border-radius:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-family:var(--font-display);color:#fff}
+.sn{background:var(--cf-navy)} .sb{background:var(--cf-blue)} .so{background:var(--cf-orange)} .sg{background:var(--cf-success)}
+</style></head><body>
+<div class="row">
+  <span class="b success">Realized</span>
+  <span class="b info">Ready</span>
+  <span class="b warn">Pending approval</span>
+  <span class="b danger">Failed</span>
+  <span class="b neutral">Outdated</span>
+</div>
+<div class="row">
+  <span class="solid sn">EASY · 16</span>
+  <span class="solid sb">AVAILABLE TO EXECUTE</span>
+  <span class="solid sg">FINISHED</span>
+  <span class="solid so">NEEDS REVIEW</span>
+</div>
+</body></html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CloudFix Console — Codebase-Faithful UI Kit</title>
+<link rel="stylesheet" href="../../colors_and_type-console.css">
+<link rel="icon" href="../../assets/console/favicon.svg">
+<style>
+  html, body { margin: 0; padding: 0; background: #FAFBFD; font-family: 'Poppins', sans-serif; color: #111827; }
+  body { min-height: 100vh; }
+
+  /* ---- Demo viewer chrome ---- */
+  .doc-bar {
+    position: sticky; top: 0; z-index: 100;
+    background: #fff; border-bottom: 1px solid #E5E7EB;
+    padding: 10px 24px; display: flex; align-items: center; gap: 12px;
+    font-size: 12px; color: #6B7280;
+  }
+  .doc-bar strong { color: #111827; font-weight: 600; }
+  .doc-bar .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #F1F5FF; color: #1C2E5B; padding: 3px 10px; border-radius: 999px; font-weight: 500; font-size: 11px;
+  }
+  .doc-bar .pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #19CDA2; }
+  .doc-bar .switch-group { margin-left: auto; display: flex; gap: 4px; padding: 3px; background: #F3F4F6; border-radius: 8px; }
+  .doc-bar .switch-group button {
+    background: transparent; border: 0; padding: 6px 12px; border-radius: 6px;
+    font-family: inherit; font-size: 12px; font-weight: 500; color: #6B7280; cursor: pointer;
+  }
+  .doc-bar .switch-group button.active { background: #fff; color: #111827; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+
+  /* ---- Reset stuff that conflicts with the real app's chrome ---- */
+  .app-frame { position: relative; min-height: calc(100vh - 41px); background: #FAFBFD; }
+
+  /* Subtle section labels for "this is where X lives" annotation when in dev mode */
+  .annotate {
+    position: absolute; left: 24px; transform: translateY(-50%);
+    background: #1C2E5B; color: #fff; padding: 2px 8px; border-radius: 4px;
+    font-size: 10px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; z-index: 5;
+    box-shadow: 0 4px 12px rgba(28,46,91,.25);
+  }
+
+  /* ----- INPUT placeholder reset (Tailwind forms substitute) ----- */
+  input, select, textarea { font-family: inherit; }
+</style>
+</head>
+<body>
+
+<div class="doc-bar">
+  <strong>CloudFix Console UI Kit</strong>
+  <span class="pill">Codebase-faithful · Poppins · cloudfix-aws@qa</span>
+  <div class="switch-group" id="view-switch">
+    <button data-view="dashboard" class="active">Savings & Opportunities</button>
+    <button data-view="recommendation">Recommendation detail</button>
+    <button data-view="resource">Resource detail (modal)</button>
+    <button data-view="reports">Reports</button>
+    <button data-view="rightspend">RightSpend</button>
+    <button data-view="settings">Settings</button>
+    <button data-view="login">Login</button>
+    <button data-view="atoms">Atoms</button>
+  </div>
+</div>
+
+<div id="root" class="app-frame cfc-app"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="codebase-components.jsx"></script>
+<script type="text/babel" src="codebase-views.jsx"></script>
+
+<script type="text/babel">
+  const { useState, useEffect } = React;
+
+  function App() {
+    const [view, setView] = useState("dashboard");
+
+    useEffect(() => {
+      const bar = document.getElementById("view-switch");
+      const onClick = (e) => {
+        const btn = e.target.closest("button[data-view]");
+        if (!btn) return;
+        bar.querySelectorAll("button").forEach(b => b.classList.toggle("active", b === btn));
+        setView(btn.dataset.view);
+      };
+      bar.addEventListener("click", onClick);
+      return () => bar.removeEventListener("click", onClick);
+    }, []);
+
+    return (
+      <>
+        {view === "dashboard"      && <DashboardView />}
+        {view === "recommendation" && <RecommendationDetailView />}
+        {view === "resource"       && <ResourceDetailView />}
+        {view === "reports"        && <ReportsView />}
+        {view === "rightspend"     && <RightSpendView />}
+        {view === "settings"       && <SettingsView />}
+        {view === "login"          && <LoginView />}
+        {view === "atoms"          && <AtomsView />}
+      </>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

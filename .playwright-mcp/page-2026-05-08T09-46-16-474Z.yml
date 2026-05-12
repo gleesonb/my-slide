@@ -1,0 +1,329 @@
+- generic [ref=e2]:
+  - generic [ref=e199]:
+    - banner [ref=e200]:
+      - generic [ref=e201]:
+        - link "Back to home" [ref=e202] [cursor=pointer]:
+          - /url: /
+          - img
+        - tablist [ref=e205]:
+          - tab "Slides" [selected] [ref=e206]
+          - tab "Assets" [ref=e207]
+      - generic [ref=e209]:
+        - heading "CloudFix — Free AWS Savings Assessment" [level=1] [ref=e210]
+        - button "Rename slide" [ref=e211]:
+          - img [ref=e212]
+      - generic [ref=e215]:
+        - button "Download" [ref=e216]:
+          - img
+        - button "Design" [ref=e217]:
+          - img
+          - generic [ref=e218]: Design
+        - button "Inspect" [ref=e219]:
+          - img
+          - generic [ref=e220]: Inspect
+        - button "Present F" [ref=e222]:
+          - img
+          - generic [ref=e223]: Present
+          - generic [ref=e224]: F
+    - generic [ref=e225]:
+      - complementary [ref=e230]:
+        - generic [ref=e231]:
+          - generic [ref=e232]: Pages
+          - generic [ref=e233]: "08"
+        - button "Go to page 1" [ref=e234]:
+          - generic [ref=e235]: "01"
+          - generic [ref=e241]:
+            - generic [ref=e242]:
+              - img "CloudFix" [ref=e243]
+              - img "AWS Partner" [ref=e244]
+            - generic [ref=e245]:
+              - generic [ref=e246]: Free Assessment
+              - heading "Free AWS Savings Assessment" [level=1] [ref=e247]:
+                - text: Free AWS Savings
+                - text: Assessment
+              - paragraph [ref=e248]: Quantify your AWS optimization opportunity before making infrastructure or commercial commitments.
+            - generic [ref=e250]:
+              - generic [ref=e251]: Typical scan finding
+              - generic [ref=e252]:
+                - generic [ref=e253]: 12–25%
+                - generic [ref=e254]: savings identified
+        - button "Go to page 2" [ref=e255]:
+          - generic [ref=e256]: "02"
+          - generic [ref=e261]:
+            - generic [ref=e262]:
+              - generic [ref=e263]: The opportunity
+              - heading "Even modest percentage gains translate to significant savings." [level=2] [ref=e264]:
+                - text: Even modest percentage gains
+                - text: translate to significant savings.
+            - generic [ref=e266]:
+              - generic [ref=e267]:
+                - generic [ref=e268]: Annual AWS spend
+                - generic [ref=e269]: $1M+
+                - generic [ref=e270]: The larger the estate, the more substantial the optimization ROI.
+              - generic [ref=e271]:
+                - generic [ref=e272]: Typical scan finding
+                - generic [ref=e273]: 12–25%
+                - generic [ref=e274]: Savings identified in initial scans of enterprise AWS estates.
+              - generic [ref=e275]:
+                - generic [ref=e276]: Your potential savings
+                - generic [ref=e277]: Validated
+                - generic [ref=e278]: Concrete dollar savings validated against your actual AWS usage and configuration data.
+            - generic [ref=e279]: A 1% validated savings opportunity can mean hundreds of thousands per year — the free scan costs nothing to find out.
+        - button "Go to page 3" [ref=e280]:
+          - generic [ref=e281]: "03"
+          - generic [ref=e286]:
+            - generic [ref=e287]:
+              - generic [ref=e288]: How CloudFix works
+              - heading "Scan. Recommend. Execute." [level=2] [ref=e289]
+            - generic [ref=e291]:
+              - generic [ref=e292]:
+                - generic [ref=e293]:
+                  - generic [ref=e294]: "1"
+                  - generic [ref=e295]: Scan
+                - generic [ref=e296]: CloudFix reads AWS cost and resource metadata — no credentials stored. Analyzes CUR data, EC2, RDS, S3, EBS, NAT gateways, and more across the full org.
+              - generic [ref=e297]:
+                - generic [ref=e298]:
+                  - generic [ref=e299]: "2"
+                  - generic [ref=e300]: Recommend
+                - generic [ref=e301]: "Recommendations are grouped by tier: Easy (unused EBS, snapshots), Medium (storage tiering, idle NAT), and Advanced (EC2/RDS right-sizing)."
+              - generic [ref=e302]:
+                - generic [ref=e303]:
+                  - generic [ref=e304]: "3"
+                  - generic [ref=e305]: Execute
+                - generic [ref=e306]: CloudFix generates controlled automation through AWS-native SSM/Change Manager workflows. Teams approve before anything runs — no manual remediation.
+            - generic [ref=e307]: The biggest gap for large estates is execution, not identification — CloudFix closes both.
+        - button "Go to page 4" [ref=e308]:
+          - generic [ref=e309]: "04"
+          - generic [ref=e314]:
+            - generic [ref=e315]:
+              - generic [ref=e316]: Why timing matters
+              - heading "Clean up waste before making AWS reservations or commitments." [level=2] [ref=e317]:
+                - text: Clean up waste before making
+                - text: AWS reservations or commitments.
+            - generic [ref=e319]:
+              - generic [ref=e320]:
+                - generic [ref=e321]:
+                  - text: Committing to Savings Plans, EDPs, or reservations
+                  - emphasis [ref=e322]: before
+                  - text: removing waste means locking in capacity that should have been reduced first.
+                - generic [ref=e323]:
+                  - generic [ref=e324]: Review findings and ROI before any paid commitment
+                  - generic [ref=e326]: Use scan results to support internal AWS commercial negotiation
+                  - generic [ref=e328]: Reservation and Savings Plan opportunities surfaced after cleanup
+              - generic [ref=e330]:
+                - generic [ref=e331]: What the scan covers
+                - table [ref=e332]:
+                  - rowgroup [ref=e333]:
+                    - row "Service Opportunity" [ref=e334]:
+                      - columnheader "Service" [ref=e335]
+                      - columnheader "Opportunity" [ref=e336]
+                  - rowgroup [ref=e337]:
+                    - row "EBS volumes & snapshots Unused resources, cleanup opportunities" [ref=e338]:
+                      - cell "EBS volumes & snapshots" [ref=e339]
+                      - cell "Unused resources, cleanup opportunities" [ref=e340]
+                    - row "GP2 to GP3 migration Storage upgrade with immediate cost reduction" [ref=e341]:
+                      - cell "GP2 to GP3 migration" [ref=e342]
+                      - cell "Storage upgrade with immediate cost reduction" [ref=e343]
+                    - row "S3 Intelligent-Tiering Automate object lifecycle for variable access patterns" [ref=e344]:
+                      - cell "S3 Intelligent-Tiering" [ref=e345]
+                      - cell "Automate object lifecycle for variable access patterns" [ref=e346]
+                    - row "CloudTrail duplication Eliminate redundant trail costs" [ref=e347]:
+                      - cell "CloudTrail duplication" [ref=e348]
+                      - cell "Eliminate redundant trail costs" [ref=e349]
+                    - row "CloudFront compression Transfer cost reduction via compression gaps" [ref=e350]:
+                      - cell "CloudFront compression" [ref=e351]
+                      - cell "Transfer cost reduction via compression gaps" [ref=e352]
+                    - row "EC2 & RDS right-sizing Instance retyping opportunities" [ref=e353]:
+                      - cell "EC2 & RDS right-sizing" [ref=e354]
+                      - cell "Instance retyping opportunities" [ref=e355]
+                    - row "SageMaker / Bedrock Runtime and usage pattern optimizations" [ref=e356]:
+                      - cell "SageMaker / Bedrock" [ref=e357]
+                      - cell "Runtime and usage pattern optimizations" [ref=e358]
+        - button "Go to page 5" [ref=e359]:
+          - generic [ref=e360]: "05"
+          - generic [ref=e365]:
+            - generic [ref=e366]:
+              - generic [ref=e367]: For the AWS admin
+              - heading "One CloudFormation deployment in the payer account." [level=2] [ref=e368]:
+                - text: One CloudFormation deployment
+                - text: in the payer account.
+            - generic [ref=e370]:
+              - generic [ref=e371]:
+                - generic [ref=e372]: "The CloudFormation stack creates the roles and resources needed to analyze cost and configuration data:"
+                - list [ref=e373]:
+                  - listitem [ref=e374]: CloudFormation parent stack and service-managed StackSet
+                  - listitem [ref=e376]: Finder role for identifying savings opportunities
+                  - listitem [ref=e378]: CUR, S3, Athena, Glue, and Lambda resources for Cost and Usage Report analysis
+                  - listitem [ref=e380]: SSM / Change Manager roles for approved Fixer workflows (optional)
+                  - listitem [ref=e382]: Backup and notifier roles for applicable workflows
+                - generic [ref=e384]: Scan can run across the full AWS organization or a subset of accounts as a validation step.
+              - generic [ref=e385]:
+                - generic [ref=e386]: Setup sequence
+                - generic [ref=e387]:
+                  - generic [ref=e388]:
+                    - generic [ref=e389]: "1"
+                    - generic [ref=e390]:
+                      - strong [ref=e391]: Create CloudFix tenant
+                      - text: — takes minutes
+                  - generic [ref=e392]:
+                    - generic [ref=e393]: "2"
+                    - generic [ref=e394]:
+                      - strong [ref=e395]: Review & deploy CloudFormation template
+                      - text: — IAM roles are readable and auditable
+                  - generic [ref=e396]:
+                    - generic [ref=e397]: "3"
+                    - generic [ref=e398]:
+                      - strong [ref=e399]: Select account scope
+                      - text: — full org or subset
+                  - generic [ref=e400]:
+                    - generic [ref=e401]: "4"
+                    - generic [ref=e402]:
+                      - strong [ref=e403]: Scan runs over a few days
+                      - text: — initial recommendations emailed and visible in app
+                - generic [ref=e404]: CloudFix can join onboarding and sit with the team through initial setup.
+        - button "Go to page 6" [active] [ref=e405]:
+          - generic [ref=e406]: "06"
+          - generic [ref=e411]:
+            - generic [ref=e412]:
+              - generic [ref=e413]: Security & data privacy
+              - heading "Read-only assessment. No credentials stored. SOC 2 Type 2 audited." [level=2] [ref=e414]:
+                - text: Read-only assessment. No credentials
+                - text: stored. SOC 2 Type 2 audited.
+            - generic [ref=e416]:
+              - table [ref=e418]:
+                - rowgroup [ref=e419]:
+                  - row "Credentials No AWS credentials stored — temporary role credentials only" [ref=e420]:
+                    - cell "Credentials" [ref=e421]
+                    - cell "No AWS credentials stored — temporary role credentials only" [ref=e422]
+                  - row "Transport & storage Encrypted in transit and at rest" [ref=e423]:
+                    - cell "Transport & storage" [ref=e424]
+                    - cell "Encrypted in transit and at rest" [ref=e425]
+                  - row "Data access Cost and resource metadata only — no database contents or application data" [ref=e426]:
+                    - cell "Data access" [ref=e427]
+                    - cell "Cost and resource metadata only — no database contents or application data" [ref=e428]
+                  - 'row "Finder role Read-only for recommendations; can apply cloudfix: prefixed tags" [ref=e429]':
+                    - cell "Finder role" [ref=e430]
+                    - 'cell "Read-only for recommendations; can apply cloudfix: prefixed tags" [ref=e431]'
+                  - row "Fixer workflows Separate from assessment; require explicit approval via SSM / Change Manager" [ref=e432]:
+                    - cell "Fixer workflows" [ref=e433]
+                    - cell "Separate from assessment; require explicit approval via SSM / Change Manager" [ref=e434]
+                  - row "Scope control Recommendation and fixer areas can be switched on or off per your preference" [ref=e435]:
+                    - cell "Scope control" [ref=e436]
+                    - cell "Recommendation and fixer areas can be switched on or off per your preference" [ref=e437]
+              - generic [ref=e438]:
+                - generic [ref=e439]:
+                  - generic [ref=e440]: SOC 2 Type 2
+                  - generic [ref=e441]: CloudFix is listed under ESW Product Platforms in an ESW Operations, LLC SOC 2 Type 2 report covering Security and Availability. Report available via the approved security review process.
+                - generic [ref=e442]:
+                  - generic [ref=e443]: Removal
+                  - generic [ref=e444]: Delete the CloudFormation stack to remove CloudFix. CUR reporting artifacts can also be cleaned up. No lock-in.
+        - button "Go to page 7" [ref=e445]:
+          - generic [ref=e446]: "07"
+          - generic [ref=e451]:
+            - generic [ref=e452]:
+              - generic [ref=e453]: Commercial model
+              - heading "The scan is free. Pay only if the savings justify it." [level=2] [ref=e454]:
+                - text: The scan is free. Pay only if
+                - text: the savings justify it.
+            - generic [ref=e456]:
+              - generic [ref=e458]:
+                - generic [ref=e459]: Pricing (indicative)
+                - generic [ref=e460]:
+                  - generic [ref=e461]: ~$25K
+                  - generic [ref=e462]: per $5M of AWS spend
+                - generic [ref=e463]: Non-linear enterprise negotiation for larger customers. Transacted via AWS Marketplace.
+              - generic [ref=e464]:
+                - generic [ref=e465]: Recommended path
+                - generic [ref=e466]:
+                  - generic [ref=e467]:
+                    - generic [ref=e468]: "1"
+                    - generic [ref=e469]:
+                      - strong [ref=e470]: Run the free scan
+                      - text: — no commitment required
+                  - generic [ref=e471]:
+                    - generic [ref=e472]: "2"
+                    - generic [ref=e473]:
+                      - strong [ref=e474]: Review the savings report and ROI case
+                      - text: — see exactly what was found
+                  - generic [ref=e475]:
+                    - generic [ref=e476]: "3"
+                    - generic [ref=e477]:
+                      - strong [ref=e478]: Decide if savings justify proceeding
+                      - text: — you make the call
+                  - generic [ref=e479]:
+                    - generic [ref=e480]: "4"
+                    - generic [ref=e481]:
+                      - strong [ref=e482]: Use findings
+                      - text: for internal optimization and AWS commercial negotiation
+        - button "Go to page 8" [ref=e483]:
+          - generic [ref=e484]: "08"
+          - generic [ref=e490]:
+            - generic [ref=e491]:
+              - img "CloudFix" [ref=e492]
+              - img "AWS Partner" [ref=e493]
+            - generic [ref=e494]:
+              - generic [ref=e495]: Recommended next steps
+              - heading "Forward to the FinOps or cloud infrastructure owner." [level=2] [ref=e496]:
+                - text: Forward to the FinOps or cloud
+                - text: infrastructure owner.
+              - generic [ref=e497]:
+                - generic [ref=e498]: "Questions to answer internally:"
+                - generic [ref=e499]:
+                  - generic [ref=e500]:
+                    - generic [ref=e501]: →
+                    - text: Who owns AWS payer / management account access?
+                  - generic [ref=e502]:
+                    - generic [ref=e503]: →
+                    - text: Who owns AWS commercial and reservation strategy?
+                  - generic [ref=e504]:
+                    - generic [ref=e505]: →
+                    - text: Is this type of optimization already being done internally?
+                  - generic [ref=e506]:
+                    - generic [ref=e507]: →
+                    - text: Full org scan or subset of accounts for validation?
+            - generic [ref=e508]:
+              - link "Schedule technical demo & free scan" [ref=e509] [cursor=pointer]:
+                - /url: https://cloudfix.com/assessment
+              - generic [ref=e510]:
+                - generic [ref=e511]: Prefer a 15-min walkthrough first?
+                - link "cloudfix.com/assessment" [ref=e512] [cursor=pointer]:
+                  - /url: https://cloudfix.com/assessment
+      - main [ref=e513]:
+        - generic [ref=e642]:
+          - generic [ref=e643]:
+            - generic [ref=e644]: Security & data privacy
+            - heading "Read-only assessment. No credentials stored. SOC 2 Type 2 audited." [level=2] [ref=e645]:
+              - text: Read-only assessment. No credentials
+              - text: stored. SOC 2 Type 2 audited.
+          - generic [ref=e647]:
+            - table [ref=e649]:
+              - rowgroup [ref=e650]:
+                - row "Credentials No AWS credentials stored — temporary role credentials only" [ref=e651]:
+                  - cell "Credentials" [ref=e652]
+                  - cell "No AWS credentials stored — temporary role credentials only" [ref=e653]
+                - row "Transport & storage Encrypted in transit and at rest" [ref=e654]:
+                  - cell "Transport & storage" [ref=e655]
+                  - cell "Encrypted in transit and at rest" [ref=e656]
+                - row "Data access Cost and resource metadata only — no database contents or application data" [ref=e657]:
+                  - cell "Data access" [ref=e658]
+                  - cell "Cost and resource metadata only — no database contents or application data" [ref=e659]
+                - 'row "Finder role Read-only for recommendations; can apply cloudfix: prefixed tags" [ref=e660]':
+                  - cell "Finder role" [ref=e661]
+                  - 'cell "Read-only for recommendations; can apply cloudfix: prefixed tags" [ref=e662]'
+                - row "Fixer workflows Separate from assessment; require explicit approval via SSM / Change Manager" [ref=e663]:
+                  - cell "Fixer workflows" [ref=e664]
+                  - cell "Separate from assessment; require explicit approval via SSM / Change Manager" [ref=e665]
+                - row "Scope control Recommendation and fixer areas can be switched on or off per your preference" [ref=e666]:
+                  - cell "Scope control" [ref=e667]
+                  - cell "Recommendation and fixer areas can be switched on or off per your preference" [ref=e668]
+            - generic [ref=e669]:
+              - generic [ref=e670]:
+                - generic [ref=e671]: SOC 2 Type 2
+                - generic [ref=e672]: CloudFix is listed under ESW Product Platforms in an ESW Operations, LLC SOC 2 Type 2 report covering Security and Availability. Report available via the approved security review process.
+              - generic [ref=e673]:
+                - generic [ref=e674]: Removal
+                - generic [ref=e675]: Delete the CloudFormation stack to remove CloudFix. CUR reporting artifacts can also be cleaned up. No lock-in.
+        - button "0" [ref=e533]:
+          - img [ref=e534]
+          - text: "0"
+  - region "Notifications alt+T"

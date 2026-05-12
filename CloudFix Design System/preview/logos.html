@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Logos</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: #fff; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .swatch { display: flex; align-items: center; justify-content: center; height: 110px; border-radius: 10px; padding: 16px; position: relative; }
+  .swatch img { max-width: 85%; max-height: 80%; object-fit: contain; display: block; }
+  .light { background: #fff; border: 1px solid var(--cf-divider); }
+  .tint { background: var(--cf-surface-2); }
+  .navy { background: var(--cf-navy); }
+  .gradient { background: var(--cf-grad-onboard); }
+  .label { position: absolute; bottom: 6px; left: 10px; font-family: var(--font-display); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: var(--cf-fg-3); }
+  .navy .label, .gradient .label { color: rgba(255,255,255,.7); }
+</style></head>
+<body>
+<div class="grid">
+  <div class="swatch light"><img src="../assets/logo-full-color.png"><span class="label">Full color · white</span></div>
+  <div class="swatch tint"><img src="../assets/logo-navy.png"><span class="label">Navy · tint</span></div>
+  <div class="swatch navy"><img src="../assets/logo-white.png"><span class="label">White · navy</span></div>
+  <div class="swatch gradient"><img src="../assets/logo-white.png"><span class="label">White · gradient</span></div>
+</div>
+</body></html>

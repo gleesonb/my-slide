@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>body{margin:0;padding:24px;background:#fff;font-family:var(--font-body)}
+.group{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.btn{font-family:var(--font-body);font-weight:600;font-size:14px;padding:10px 18px;border-radius:6px;border:1px solid transparent;cursor:pointer;transition:all .12s}
+.btn.primary{background:var(--cf-navy);color:#fff}
+.btn.primary:hover{background:var(--cf-navy-900)}
+.btn.blue{background:var(--cf-blue);color:#fff}
+.btn.outline{background:#fff;border-color:var(--cf-navy);color:var(--cf-navy)}
+.btn.orange{background:var(--cf-orange);color:#fff}
+.btn.ghost{background:transparent;color:var(--cf-blue)}
+.btn.sm{padding:6px 12px;font-size:12px}
+.btn.caps{text-transform:uppercase;letter-spacing:.06em;font-size:12px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.lbl{font-family:var(--font-mono);font-size:11px;color:var(--cf-fg-3);width:90px}
+</style></head><body>
+<div class="group"><div class="lbl">Primary</div>
+  <button class="btn primary">Start free assessment</button>
+  <button class="btn blue">Estimate savings</button>
+  <button class="btn orange">Get the checklist</button>
+</div>
+<div class="group"><div class="lbl">Outline</div>
+  <button class="btn outline">Learn more</button>
+  <button class="btn ghost">View details</button>
+  <button class="btn primary" disabled>Disabled</button>
+</div>
+<div class="group"><div class="lbl">App caps</div>
+  <button class="btn primary caps sm">EXECUTE</button>
+  <button class="btn blue caps sm">RELOAD</button>
+  <button class="btn outline caps sm">EXPORT</button>
+</div>
+</body></html>

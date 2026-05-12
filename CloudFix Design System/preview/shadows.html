@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Shadow elevation</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>body{margin:0;padding:30px;background:var(--cf-surface-2);font-family:var(--font-body)}
+.row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border-radius:10px;height:100px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:var(--cf-fg-2)}
+.card .nm{font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--cf-navy)}
+.card .desc{font-family:var(--font-mono);font-size:11px;margin-top:4px}
+.s1{box-shadow:var(--shadow-1)}.s2{box-shadow:var(--shadow-2)}.s3{box-shadow:var(--shadow-3)}.s4{box-shadow:var(--shadow-4)}
+</style></head><body>
+<div class="row">
+  <div class="card s1"><div class="nm">Shadow 1</div><div class="desc">resting · hairline</div></div>
+  <div class="card s2"><div class="nm">Shadow 2</div><div class="desc">card default</div></div>
+  <div class="card s3"><div class="nm">Shadow 3</div><div class="desc">card hover</div></div>
+  <div class="card s4"><div class="nm">Shadow 4</div><div class="desc">modal · popover</div></div>
+</div>
+</body></html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Brand colors</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 20px; background: #fff; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .sw { aspect-ratio: 1.05/1; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-1); }
+  .sw .nm { font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 0.04em; }
+  .sw .hx { font-family: var(--font-mono); font-size: 11px; opacity: 0.85; }
+  .dark { color: #fff; }
+  .light { color: var(--cf-ink); }
+</style></head>
+<body>
+<div class="grid">
+  <div class="sw dark" style="background:#1F3A68"><div class="nm">Navy</div><div class="hx">#1F3A68</div></div>
+  <div class="sw dark" style="background:#142747"><div class="nm">Navy 900</div><div class="hx">#142747</div></div>
+  <div class="sw dark" style="background:#2A8FEA"><div class="nm">Blue</div><div class="hx">#2A8FEA</div></div>
+  <div class="sw light" style="background:#DCEBFB"><div class="nm">Blue 100</div><div class="hx">#DCEBFB</div></div>
+  <div class="sw dark" style="background:#2AC1D6"><div class="nm">Cyan</div><div class="hx">#2AC1D6</div></div>
+  <div class="sw dark" style="background:#2FCFB3"><div class="nm">Teal</div><div class="hx">#2FCFB3</div></div>
+  <div class="sw dark" style="background:#ED8705"><div class="nm">Orange</div><div class="hx">#ED8705</div></div>
+  <div class="sw light" style="background:#FCEBD2"><div class="nm">Orange 100</div><div class="hx">#FCEBD2</div></div>
+  <div class="sw" style="background:linear-gradient(95deg,#2AC1D6,#2A8FEA 60%,#1F3A68);color:#fff"><div class="nm">Logo gradient</div><div class="hx">cyan→navy</div></div>
+  <div class="sw" style="background:linear-gradient(135deg,#1F8FBE,#1F5FAA 60%,#1F3A68);color:#fff"><div class="nm">Onboard gradient</div><div class="hx">135°</div></div>
+</div>
+</body></html>
